@@ -1,14 +1,29 @@
 import { writable } from "svelte/store";
 
+const cookieKey = 'advertisment' as const
+
+
+enum EState {
+  closed = 'closed',
+  show = 'show'
+
+}
+
+type TState = keyof typeof EState
+
 const discount = 10;
 const holiday = 'Black Friday';
 const code = '10FRIDAY';
 const date = '24-27 Nov'
 
 
-const visible = writable(true)
+/** this refers to the card banner*/
+const visible = writable({
+  show: false,
+  clicked: false
+})
 
-function intersectionObserver(node: HTMLElement) {
+function intersectionObserver(node: HTMLElement,callback:(entry:IntersectionObserverEntry)=>void) {
 
   const options = {
     rootMargin: '0px',
@@ -17,7 +32,8 @@ function intersectionObserver(node: HTMLElement) {
 
   const observer = new IntersectionObserver(entries => {
     const [entry] = entries
-    visible.set(entry.isIntersecting)
+    callback(entry)
+   
 
   }, options);
 
@@ -31,4 +47,4 @@ function intersectionObserver(node: HTMLElement) {
 }
 
 
-export { discount, holiday, code, date, intersectionObserver, visible }
+export { discount, holiday, code, date, intersectionObserver, visible, cookieKey, EState, type TState }

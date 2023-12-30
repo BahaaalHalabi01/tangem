@@ -2,12 +2,23 @@
 	import '../app.css';
 	import Close from '$lib/close.svelte';
 	import ChevronRight from '$lib/chevron-right.svelte';
-	import { code, date, discount, holiday, intersectionObserver } from '$lib/black-friday';
+	import { code, date, discount, holiday, intersectionObserver, visible } from '$lib/black-friday';
+	import type { LayoutData } from './$types';
+
+	let { data } = $props<{ data: LayoutData }>();
 
 	$effect(() => {
+		if (!data.show || $visible.clicked) return;
 		const node = document.getElementById('nav-black-friday');
 		if (!node) return;
-		const intersectionObserverAction = intersectionObserver(node);
+		const intersectionObserverAction = intersectionObserver(node, callback);
+
+		function callback(entry: Parameters<Parameters<typeof intersectionObserver>[1]>[0]) {
+			//to not keep setting the store
+			if ($visible.show === entry.isIntersecting) {
+				$visible.show = !entry.isIntersecting;
+			}
+		}
 
 		return () => {
 			intersectionObserverAction.destroy();
