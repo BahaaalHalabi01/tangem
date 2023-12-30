@@ -5,15 +5,25 @@
 
 @layer base{
 
-  body {
-   @apply min-h-huge overflow-x-hidden bg-white;
-  }
+:root{
+  --card-h: 21.8125rem;
+  --card-w: 37.5rem;
+}
 
+  body {
+   @apply min-h-huge bg-white;
+  }
 
   li::marker{
   width:3px;
   height:3px;
   color:#FFFFFF15
+  }
+
+  [data-state="true"]{
+
+@apply text-red-300
+
   }
 
   strong {
@@ -30,6 +40,10 @@
   .gradient-text {
      @apply bg-gradient-to-r from-brand-gradient-from to-brand-gradient-to bg-clip-text text-transparent;
   }
+
+  .hide{
+    @apply lg:translate-x-[calc(2rem+var(--card-w))] translate-x-[calc(2rem+100%)];
+}
 
 /* this will work on phone but not on small screen browser
 * on phone the card image has white borders
