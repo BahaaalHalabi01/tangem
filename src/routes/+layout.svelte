@@ -64,7 +64,7 @@
 		</ul>
 		<div class=" gap-x-3 flex items-center">
 			<button
-				class="md:bg-white rounded-full text-dark md:py-2.5 md:px-3.5 items-center flex justify-center md:max-h-[38px] md:w-[115px]"
+				class="md:bg-white rounded-full text-dark md:py-2.5 md:px-3.5 items-center flex justify-center md:max-h-[38px] md:w-[115px] font-medium"
 			>
 				<ChevronRight class="inline md:hidden" />
 				<span class="hidden md:inline text-dark"> Shop now </span>

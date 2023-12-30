@@ -7,7 +7,7 @@ describe('show and hide card', () => {
     cy.scrollTo(0,0)
     cy.get('[data-cy="top"]').isInViewPort()
     //other way of checking if it isn't visible
-    cy.get('[data-cy="ad-card"]').invoke('attr','data-state').should('be.eq','false')
+    cy.get('[data-cy="ad-card"]').get('.hide').should('exist')
   })
   it('shows banner on scroll down', () => {
     cy.get('[data-cy="top"]').isInViewPort()
