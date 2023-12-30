@@ -28,8 +28,8 @@ export default {
         'brand-gradient-from': '#7D5317',
         'brand-gradient-to': '#EDDF95',
       },
-      dropShadow: {
-        '3xl': '0 4px 34px rgba(0,0,0,0.34)'
+      boxShadow: {
+        '3xl': '0px 4px 34px 0px rgba(0, 0, 0, 0.45)'
       },
       spacing: {
         'card': '21.8125rem',
