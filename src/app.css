@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 
+@layer base{
+
+  body {
+   @apply min-h-huge overflow-x-hidden bg-white;
+  }
+
+
+  li::marker{
+  width:3px;
+  height:3px;
+  color:#FFFFFF15
+  }
+
+  strong {
+  @apply text-brand-yellow;
+  }
+
+}
+
+
 @layer utilities {
 .gradient-bg {
   background: radial-gradient(circle at center,#FAE571, #0B0E1700);
@@ -14,21 +34,18 @@
 /* this will work on phone but not on small screen browser
 * on phone the card image has white borders
 * */
+
+  #card {
+  /* put here to not overlap with styles */
+    @apply bg-dark;
+  }
+
   @media (hover:none){
-    #ad-card { 
-      background-size: auto;
+    #card { 
+    background-size: auto;
+    @apply h-card;
     }
   }
 }
 
-li::marker{
-  width:3px;
-  height:3px;
-  color:#FFFFFF15
 
-}
-
-strong {
-  @apply text-brand-yellow;
-  
-}

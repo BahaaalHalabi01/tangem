@@ -29,7 +29,7 @@ export default {
         'brand-gradient-to': '#EDDF95',
       },
       boxShadow: {
-        '3xl': '0px 4px 34px 0px rgba(0, 0, 0, 0.45)'
+        '3xl': '0 8px 34px 0px rgba(0, 0, 0, 0.45)'
       },
       spacing: {
         'card': '21.8125rem',

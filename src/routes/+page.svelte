@@ -15,7 +15,7 @@
   data-state={$visible.show}
   id='card'
 	class={cn(
-		`bg-black-friday-small md:bg-black-friday h-card px-3.5  grid-cols-1 shadow-3xl bg-no-repeat bg-cover bg-center 
+		`bg-black-friday-small md:bg-black-friday h-card px-3.5  py-1.5 grid-cols-1 shadow-3xl bg-no-repeat bg-cover bg-center 
       md:w-card-w md:ml-auto md:mr-4 md:rounded-2xl md:grid-cols-2 sticky top-8 right-8 grid transition-all duration-[1500ms] ease-out-expo`,
 		(!$visible.show || $visible.clicked) && 'translate-x-[700px]'
 		//move it to the right to hide it and make the transition
