@@ -1,38 +1,34 @@
-# create-svelte
+# About
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is developed using <strong>Svelte5</strong> and <strong>Sveltekit</strong>. 
 
-## Creating a project
+Using <strong>tailwindcss</strong> for styling.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Build your own Svelte5 project powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Based on the chosen package manager that you installed, change the bellow commands accordingly.
 
 ```bash
-npm run dev
-
+pnpm dev
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm dev -- --open
 ```
 
 ## Building
-
 To create a production version of your app:
 
 ```bash
-npm run build
+pnpm build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `pnpm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Notes
+
+After you click the `X` button  on the top right hand corner of the card, the card will no longer upon
+even after refreshing, to reset that behavror, clear the cookie with key `advertisment` or set it to `show`.
