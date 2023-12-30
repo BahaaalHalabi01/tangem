@@ -32,8 +32,8 @@ export default {
         '3xl': '0 8px 34px 0px rgba(0, 0, 0, 0.45)'
       },
       spacing: {
-        'card': 'var(--card-h)',
-        'card-w': 'var(--card-w)',
+        'card': '21.8125rem',
+        'card-w': '37.5rem',
         'huge': 'calc(2.5*100dvh)'
       }
     },

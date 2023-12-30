@@ -73,7 +73,8 @@
 		</div>
 	</div>
 </header>
-  <!-- there must be a better way than this to keep the card sticky!!!-->
-<main class={cn('min-h-huge relative',(!$visible.show || $visible.clicked) && 'overflow-x-hidden')}>
+<main class={cn('grow min-h-huge  overflow-x-hidden ')}>
+	<div>
 		{@render children()}
+	</div>
 </main>
