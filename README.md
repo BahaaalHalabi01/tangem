@@ -7,9 +7,7 @@ Using <strong>tailwindcss</strong> for styling.
 Build your own Svelte5 project powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
 
-
 ## Developing
-
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 Based on the chosen package manager that you installed, change the bellow commands accordingly.
 
@@ -18,6 +16,10 @@ pnpm dev
 # or start the server and open the app in a new browser tab
 pnpm dev -- --open
 ```
+## Testing
+We use `Cypress` for testing the needed behavior
+- Run `pnpm test` to run the dev server and execute the tests in cli
+- Run `pnpm test:open` to open cypress in ui mode and execute tests there
 
 ## Building
 To create a production version of your app:
