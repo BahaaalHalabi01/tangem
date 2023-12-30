@@ -12,8 +12,19 @@ export default {
 
     },
     extend: {
+      backgroundImage:{
+        'black-friday':"url('/card-small.svg')"
+      },
       colors: {
-        'dark': '#0B0B0B'
+        'dark': '#0B0B0B',
+        'light-dark': '#6C6C70',
+        'secondary':'#D9D9D9',
+        'secondary-dark':'hsla(0, 0%, 100%, 0.1)',
+        'brand-yellow':'#D7A830',
+      },
+      spacing:{
+        'card':'21.8125rem',
+        'card-w':'37.5rem'
       }
     },
   },
