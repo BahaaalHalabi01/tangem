@@ -12,11 +12,13 @@ declare global {
   }
 }
 
+Cypress.Cookies.debug(true, { verbose: true })
 
 // the below two are needed as the navbar stays in the dom when scrolling down
 Cypress.Commands.add('notInViewPort', { prevSubject: true }, subject => {
   const bounding = subject[0].getBoundingClientRect();
-  expect(bounding.bottom < 0).to.be.true;
+
+  expect(bounding.bottom <= 0).to.be.true;
   return subject;
 })
 

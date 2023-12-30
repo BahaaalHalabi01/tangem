@@ -4,8 +4,8 @@ const cookieKey = 'advertisment' as const
 
 
 enum EState {
-  closed = 'closed',
-  show = 'show'
+  show = 'show',
+  hide = 'hide'
 
 }
 
@@ -27,7 +27,7 @@ function intersectionObserver(node: HTMLElement,callback:(entry:IntersectionObse
 
   const options = {
     rootMargin: '0px',
-    threshold: 1,
+    threshold: 0.5,
   } satisfies IntersectionObserverInit
 
   const observer = new IntersectionObserver(entries => {

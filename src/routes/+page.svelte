@@ -12,10 +12,11 @@
 <div class="pt-card" />
 <section
   data-cy='ad-card'
-  id='ad-card'
+  data-state={$visible.show}
+  id='card'
 	class={cn(
 		`bg-black-friday-small md:bg-black-friday h-card px-3.5  grid-cols-1 shadow-3xl bg-no-repeat bg-cover bg-center 
-md:w-card-w md:ml-auto md:mr-4 md:rounded-2xl md:grid-cols-2 sticky top-8 right-8 grid transition-all duration-[1500ms] ease-out-expo`,
+      md:w-card-w md:ml-auto md:mr-4 md:rounded-2xl md:grid-cols-2 sticky top-8 right-8 grid transition-all duration-[1500ms] ease-out-expo`,
 		(!$visible.show || $visible.clicked) && 'translate-x-[700px]'
 		//move it to the right to hide it and make the transition
 	)}
@@ -23,7 +24,8 @@ md:w-card-w md:ml-auto md:mr-4 md:rounded-2xl md:grid-cols-2 sticky top-8 right-
 	<div class="hidden md:block" />
 	<div class="flex flex-col items-center justify-center pt-4 relative">
 		<!-- can do it on client side also, on svelte i prefer form actions -->
-		<form method="POST" on:submit|preventDefault={handleSubmit} use:enhance>
+		<form method="POST" on:submit|preventDefault={handleSubmit} use:enhance >
+      <button class="sr-only" data-cy='close'></button>
 			<button class="absolute top-3.5 right-0"> <Close /></button>
 		</form>
 		<h1 class="text-[46px] font-medium text-white leading-10 text-center">{holiday}</h1>

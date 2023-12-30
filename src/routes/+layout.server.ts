@@ -7,7 +7,7 @@ export const load: LayoutServerLoad = ({ cookies }) => {
 
   let show = true
   const value = cookies.get(cookieKey) as TState
-  if (value && value === 'closed') {
+  if (value && value === 'hide') {
     show = false
     return
   }

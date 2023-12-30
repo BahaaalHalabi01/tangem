@@ -1,4 +1,5 @@
 import { defineConfig } from "cypress";
+import { cookieKey } from './src/lib/black-friday'
 
 export default defineConfig({
   component: {
@@ -8,6 +9,9 @@ export default defineConfig({
     }
   },
   e2e: {
+    env: {
+      cookieKey
+    },
     baseUrl: 'http://localhost:5173',
     setupNodeEvents(on, config) {
     },
