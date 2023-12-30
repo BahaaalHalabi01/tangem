@@ -70,6 +70,6 @@
 	</div>
 </div>
 
-<main class="relative grow">
+<main class="relative grow overflow-x-hidden">
 	<slot />
 </main>

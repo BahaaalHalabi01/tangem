@@ -10,6 +10,15 @@
   .gradient-text {
      @apply bg-gradient-to-r from-brand-gradient-from to-brand-gradient-to bg-clip-text text-transparent;
   }
+
+/* this will work on phone but not on small screen browser
+* on phone the card image has white borders
+* */
+  @media (hover:none){
+    #ad-card { 
+      background-size: auto;
+    }
+  }
 }
 
 li::marker{
