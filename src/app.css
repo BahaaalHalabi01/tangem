@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer utilities {
+.gradient-bg {
+  background: radial-gradient(circle at center,#FAE571, #0B0E1700);
+}
+  .gradient-text {
+     @apply bg-gradient-to-r from-brand-gradient-from to-brand-gradient-to bg-clip-text text-transparent;
+  }
+}
+
+li::marker{
+  width:3px;
+  height:3px;
+  color:#FFFFFF15
+
+}
+
 strong {
   @apply text-brand-yellow;
   

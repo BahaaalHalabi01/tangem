@@ -26,11 +26,12 @@
 	});
 </script>
 
-<nav class="h-[54px]"></nav>
+<nav class="h-[54px] bg-white"></nav>
 <div
 	class="h-[54px] bg-dark flex lg:px-6 pr-6 py-1.5 items-center justify-between relative"
 	id="nav-black-friday"
 >
+  <div id='gradient' class="absolute right-0 w-[55vw] gradient-bg h-full opacity-35 hidden md:block"/>
 	<div class="bg-dark md:hidden">
 		<img src="/gift-small-mobile.svg" alt="gift" />
 	</div>

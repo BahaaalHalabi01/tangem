@@ -2,34 +2,39 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    screens:{
-      'md':'834px',
+    screens: {
+      'md': '834px',
       // =>@media (min-width:834px)
-      'lg':'1360px',
+      'lg': '1360px',
       // =>@media (min-width:1360px)
-      'xl':'1560px'
+      'xl': '1560px'
       // =>@media (min-width:1560px)
 
     },
     extend: {
-      transitionTimingFunction:{
+      transitionTimingFunction: {
         'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
       },
-      backgroundImage:{
-        'black-friday-small':"url('/card-small.svg')",
-        'black-friday':"url('/card.jpg')"
+      backgroundImage: {
+        'black-friday-small': "url('/card-small.svg')",
+        'black-friday': "url('/card.jpg')"
       },
       colors: {
         'dark': '#0B0B0B',
         'light-dark': '#6C6C70',
-        'secondary':'#D9D9D9',
-        'secondary-dark':'hsla(0, 0%, 100%, 0.1)',
-        'brand-yellow':'#D7A830',
+        'secondary': '#D9D9D9',
+        'secondary-dark': 'hsla(0, 0%, 100%, 0.1)',
+        'brand-yellow': '#D7A830',
+        'brand-gradient-from': '#7D5317',
+        'brand-gradient-to': '#EDDF95',
       },
-      spacing:{
-        'card':'21.8125rem',
-        'card-w':'37.5rem',
-        'huge':'calc(2.5*100dvh)'
+      dropShadow: {
+        '3xl': '0 4px 34px rgba(0,0,0,0.34)'
+      },
+      spacing: {
+        'card': '21.8125rem',
+        'card-w': '37.5rem',
+        'huge': 'calc(2.5*100dvh)'
       }
     },
   },
