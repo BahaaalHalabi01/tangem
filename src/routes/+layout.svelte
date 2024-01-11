@@ -49,7 +49,7 @@
 			class="flex gap-x-1 lg:gap-x-3 md:list-disc text-white list-inside md:absolute md:left-1/2 md:-translate-x-1/2 flex-wrap"
 		>
 			<li class="list-none order-0">
-				<strong class="text-white">{holiday},</strong><span class="hidden lg:inline-block">
+				<strong class="text-white">{holiday}<span class="md:hidden lg:inline-block">,</span></strong><span class="hidden lg:inline-block">
 					&nbsp;
 					{date}</span
 				>
