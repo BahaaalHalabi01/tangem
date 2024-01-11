@@ -27,8 +27,9 @@ function intersectionObserver(node: HTMLElement,callback:(entry:IntersectionObse
 
   const options = {
     rootMargin: '0px',
-    threshold: 0.5,
+    threshold: 0,
   } satisfies IntersectionObserverInit
+
 
   const observer = new IntersectionObserver(entries => {
     const [entry] = entries

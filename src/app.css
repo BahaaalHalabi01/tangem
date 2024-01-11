@@ -45,21 +45,27 @@
     @apply lg:translate-x-[calc(2rem+var(--card-w))] translate-x-[calc(2rem+100%)];
 }
 
-/* this will work on phone but not on small screen browser
-* on phone the card image has white borders
-* */
 
-  #card {
-  /* put here to not overlap with styles */
-    @apply bg-dark;
-  }
 
-  @media (hover:none){
-    #card { 
-    background-size: auto;
-    @apply h-card;
+
+    @media (max-width:834px) {
+    #card {
+            background-color: #0B0B0B;
+            background-position: left -5dvw center;
+      }
     }
+    @media (min-width:340px) and (max-width:540px){
+       #card {
+            background-position: right -9dvw center;
+            background-color: #0B0B0B;
+            }
+    }
+
+    @media (max-width:340px){
+       #card {
+                background-position: right 50% center;
+        }
+    }
+
+
   }
-}
-
-

@@ -14,14 +14,14 @@
   data-cy='ad-card'
   id='card'
 	class={cn(
-		`bg-black-friday h-card px-3.5  py-1.5 grid-cols-1 shadow-3xl bg-no-repeat bg-cover bg-right 
+		`bg-black-friday h-card px-3.5  py-1.5 grid-cols-1 shadow-3xl bg-no-repeat 
       md:w-card-w md:ml-auto md:mr-4 md:rounded-2xl md:grid-cols-2 sticky top-8 right-8 grid transition-all duration-[1500ms] ease-out-expo`,
 		(!$visible.show || $visible.clicked) && 'hide'
 		//move it to the right to hide it and make the transition
 	)}
 >
 	<div class="hidden md:block" />
-	<div class="flex flex-col items-center justify-center pt-4 relative">
+	<div class="flex flex-col items-center justify-center pt-5 relative">
 		<!-- can do it on client side also, on svelte i prefer form actions -->
 		<form method="POST" on:submit|preventDefault={handleSubmit} use:enhance >
       <button class="sr-only" data-cy='close'></button>

@@ -5,5 +5,4 @@ export const actions = {
   default: async ({ cookies }) => {
     cookies.set(cookieKey, EState.hide, { path: '/' })
   }
-
 } satisfies Actions
